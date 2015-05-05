@@ -26,14 +26,15 @@ la recherche full-textavec Lucene via ElasticSearch).
 #Questions :
 Quelles sont les types de donnees stockes dans Redis , que peut on faire comme type de requetes?
 #Reponses:
-*Redis Permet de manipuler types de donnees simples :typage des données en chaîne de caractères, listes, 
+<u>type de donnees manipuler</u>:
+-Redis Permet de manipuler types de donnees simples :typage des données en chaîne de caractères, listes, 
 tableaux associatifs et ensembles triés d'éléments, et propose des opérations avancées propres à chaque type.
-*Dans Notre  projet ci-precit  les types de donnees stockees dans redis sont des collections  d'objets non ordonnées
+-Dans Notre  projet ci-precit  les types de donnees stockees dans redis sont des collections  d'objets non ordonnées
 avec des valeurs uniques couple cle/valeur (chaîne de caractères)
 avec la commande :  jedis.sadd(cacheKey,"Python);//SADD on ajoute 
-                    jedis.smembers(CacheKey ) //SMEMBERS (pour récupérer le set)
+                  jedis.smembers(CacheKey ) //SMEMBERS (pour récupérer le set)
                     
-Requetes possibles :
+<u>Requetes possibles </u>:
 on a la  possibilité de gérer l'expiration des données avec la commande expire:
                      jedis.expire(cachekey,15); //ce qui rend  Redis comme  un outil idéal pour gérer du cache.
 on a la possibilité d'incrementer la valeur Redis:
